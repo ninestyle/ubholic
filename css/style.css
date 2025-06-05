@@ -14,7 +14,7 @@
     --bg-nav-icon-button-hover: #C95C8D;
     --bg-to-top-button: rgba(222, 111, 161, 0.7);
     --bg-to-top-button-hover: rgba(201, 92, 141, 0.9);
-    --bg-product-image-placeholder: #FDEFF2; /* 이미지 로딩 중 배경색 또는 플레이스홀더 배경 */
+    --bg-product-image-placeholder: #FDEFF2; 
     --bg-branch-item: #ffffff;
     --bg-home-overlay: rgba(80, 20, 40, 0.45);
 
@@ -263,13 +263,13 @@ section:not(#home):nth-of-type(even) { background-color: var(--bg-secondary); }
 #branches .branches-content {
     display: flex;
     justify-content: space-around;
-    text-align: left; 
+    /* text-align: left; 제거 -> 각 .branch-info-content 에서 제어 */
     gap: 40px;
     margin-top: 40px;
 }
 #branches .branch-item {
     flex: 1;
-    min-width: 260px; /* 최소 너비 추가하여 너무 좁아지지 않게 */
+    min-width: 260px; 
     background: var(--bg-branch-item);
     border-radius: 12px; 
     box-shadow: 0 8px 25px var(--shadow-branch-item);
@@ -295,21 +295,23 @@ section:not(#home):nth-of-type(even) { background-color: var(--bg-secondary); }
 }
 #branches .branch-item .branch-info-content {
     padding: 25px; 
-    text-align: left; 
+    text-align: center; /* 내부 모든 텍스트 가운데 정렬 */
     flex-grow: 1; 
     display: flex;
     flex-direction: column;
+    justify-content: center; /* 수직 가운데 정렬도 추가 (필요시) */
 }
 #branches .branch-item .branch-info-content h3 {
     font-size: 1.6rem;
     margin-bottom: 15px;
     color: var(--text-headings);
-    text-align: center; 
+    /* text-align: center; 는 부모로부터 상속 */
 }
 #branches .branch-item .branch-info-content p {
     font-size: 1rem;
     margin-bottom: 8px;
     color: var(--text-secondary);
+    /* text-align: center; 는 부모로부터 상속 */
 }
 #branches .branch-item .branch-info-content p:last-child {
     margin-bottom: 0;
