@@ -5,7 +5,7 @@
     --bg-secondary: #FFF5F8;
     --bg-navbar: rgba(255, 255, 255, 0.85);
     --bg-footer: #282828;
-    --bg-card: #fff;
+    --bg-card: #fff; /* 카드 배경 통일 */
     --bg-map-container-loader: #eee;
     --bg-lang-switcher: #FDEFF2;
     --bg-lang-switcher-hover: #FADCE5;
@@ -15,12 +15,12 @@
     --bg-to-top-button: rgba(222, 111, 161, 0.7);
     --bg-to-top-button-hover: rgba(201, 92, 141, 0.9);
     --bg-product-image-placeholder: #FDEFF2; 
-    --bg-branch-item: #ffffff;
+    /* --bg-branch-item: #ffffff; -> --bg-card 로 통일 */
     --bg-home-overlay: rgba(80, 20, 40, 0.45);
 
     --text-primary: #333;
-    --text-secondary: #555;
-    --text-headings: #222;
+    --text-secondary: #555;     /* 지점 P, 일반 P */
+    --text-headings: #222;      /* H3, H4 */
     --text-accent: #DE6FA1;
     --text-accent-hover: #C95C8D;
     --text-footer: #a0a0a0;
@@ -31,20 +31,20 @@
     --text-to-top-button: #fff;
     --text-home-title: #fff;
     --text-home-subtitle: #fff;
-    --text-product-meta: #666;
+    --text-product-meta: #666;  /* 서비스 P */
     --text-section-title-icon: #DE6FA1;
 
     --border-strong: #ddd;
-    --border-card: #FADCE5;
-    --border-branch-item: #F4C7D9;
+    --border-card: #FADCE5; /* 카드 테두리 통일 */
+    /* --border-branch-item: #F4C7D9; -> --border-card 로 통일 */
     --border-navbar-bottom: rgba(222, 111, 161, 0.15);
     --border-section-heading-underline: #DE6FA1;
     --border-iframe-container: #FADCE5;
 
-    --shadow-card: rgba(222, 111, 161, 0.1);
-    --shadow-card-hover: rgba(222, 111, 161, 0.18);
-    --shadow-branch-item: rgba(222, 111, 161, 0.09);
-    --shadow-branch-item-hover: rgba(222, 111, 161, 0.15);
+    --shadow-card: rgba(222, 111, 161, 0.1); /* 카드 그림자 통일 */
+    --shadow-card-hover: rgba(222, 111, 161, 0.18); /* 카드 호버 그림자 통일 */
+    /* --shadow-branch-item: rgba(222, 111, 161, 0.09); -> --shadow-card 로 통일 */
+    /* --shadow-branch-item-hover: rgba(222, 111, 161, 0.15); -> --shadow-card-hover 로 통일 */
     --shadow-navbar: rgba(0, 0, 0, 0.05);
     --shadow-home-text: rgba(0,0,0,0.3);
     --shadow-home-subtitle-text: rgba(0,0,0,0.5);
@@ -59,7 +59,7 @@
         --bg-secondary: #212121;
         --bg-navbar: rgba(28, 28, 28, 0.85);
         --bg-footer: #121212;
-        --bg-card: #2c2c2c;
+        --bg-card: #2c2c2c; /* 카드 배경 통일 */
         --bg-map-container-loader: #333;
         --bg-lang-switcher: #333;
         --bg-lang-switcher-hover: #444;
@@ -69,11 +69,11 @@
         --bg-to-top-button: rgba(244, 164, 196, 0.3);
         --bg-to-top-button-hover: rgba(240, 128, 160, 0.5);
         --bg-product-image-placeholder: #333;
-        --bg-branch-item: #2e2e2e;
+        /* --bg-branch-item: #2e2e2e; -> --bg-card 로 통일 (약간의 차이는 있었음) */
         --bg-home-overlay: rgba(0, 0, 0, 0.65);
 
         --text-primary: #e0e0e0;
-        --text-secondary: #bb86fc;
+        --text-secondary: #bbbbbb;
         --text-headings: #ffffff;
         --text-accent: #F4A4C4;
         --text-accent-hover: #F080A0;
@@ -85,20 +85,19 @@
         --text-to-top-button: #121212;
         --text-home-title: #ffffff;
         --text-home-subtitle: #f0f0f0;
-        --text-product-meta: #aaa;
+        --text-product-meta: #aaaaaa;
         --text-section-title-icon: #F4A4C4;
 
         --border-strong: #555;
-        --border-card: #553c47;
-        --border-branch-item: #5f434f;
+        --border-card: #444; /* 카드 테두리 통일 (기존 --border-card, --border-branch-item 이 다름 -> 하나로 통일) */
+        /* --border-branch-item: #5f434f; -> --border-card 로 통일 (기존 : #553c47) */
+        /* 기존 다크모드 --border-card 는 #444, --border-branch-item 은 #5f434f. 여기서는 #444 로 통일 */
         --border-navbar-bottom: rgba(244, 164, 196, 0.2);
         --border-section-heading-underline: #F4A4C4;
         --border-iframe-container: #553c47;
 
         --shadow-card: rgba(0,0,0,0.1);
         --shadow-card-hover: rgba(0,0,0,0.15);
-        --shadow-branch-item: rgba(0,0,0,0.12);
-        --shadow-branch-item-hover: rgba(0,0,0,0.18);
         --shadow-navbar: rgba(0,0,0,0.1);
         --shadow-home-text: rgba(0,0,0,0.5);
         --shadow-home-subtitle-text: rgba(0,0,0,0.6);
@@ -117,9 +116,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4 { font-weight: 700; color: var(--text-headings); }
-a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease; }
-a:hover { color: var(--text-accent-hover, var(--text-secondary)); }
+h1, h2, h3, h4 { font-weight: 700; /* color 는 각 요소에서 지정 */ }
+a { color: var(--text-accent); text-decoration: none; transition: color 0.3s ease; } /* 기본 링크 색상을 accent로 변경 */
+a:hover { color: var(--text-accent-hover); }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .material-symbols-outlined { vertical-align: middle; font-size: 1.2em; margin-right: 8px; }
@@ -131,6 +130,7 @@ a:hover { color: var(--text-accent-hover, var(--text-secondary)); }
     margin-bottom: 60px;
     position: relative;
     display: inline-block;
+    color: var(--text-headings);
 }
 .section h2 .material-symbols-outlined {
     display: block;
@@ -259,102 +259,90 @@ section:not(#home):nth-of-type(even) { background-color: var(--bg-secondary); }
 .fade-in-section { opacity: 0; transform: translateY(80px) scale(0.98); transition: opacity 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .fade-in-section.is-visible { opacity: 1; transform: translateY(0) scale(1); }
 
-/* Branches Section */
-#branches .branches-content {
-    display: flex;
-    justify-content: space-around;
-    /* text-align: left; 제거 -> 각 .branch-info-content 에서 제어 */
-    gap: 40px;
-    margin-top: 40px;
-}
-#branches .branch-item {
-    flex: 1;
-    min-width: 260px; 
-    background: var(--bg-branch-item);
+/* UI Card Common Styles */
+.ui-card {
+    background: var(--bg-card);
     border-radius: 12px; 
-    box-shadow: 0 8px 25px var(--shadow-branch-item);
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease, border-color 0.3s ease;
-    border: 1px solid var(--border-branch-item);
-    text-decoration: none;
-    color: var(--text-primary);
+    box-shadow: 0 5px 15px var(--shadow-card); /* 그림자 통일 (기존 service-item 그림자) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 전환 효과 시간 통일 */
+    border: 1px solid var(--border-card);
     overflow: hidden; 
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
+    text-decoration: none; /* a 태그에 적용될 경우 대비 */
 }
-#branches .branch-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 35px var(--shadow-branch-item-hover);
-    color: var(--text-accent);
+.ui-card:hover {
+    transform: translateY(-5px); /* 호버 시 이동 거리 통일 */
+    box-shadow: 0 10px 25px var(--shadow-card-hover); /* 호버 시 그림자 통일 */
 }
-#branches .branch-item img {
+.ui-card-image {
     width: 100%;
-    height: 200px; 
+    height: 200px; /* 이미지 높이 통일 */
     object-fit: cover;
     background-color: var(--bg-product-image-placeholder);
     filter: var(--image-filter-default);
 }
-#branches .branch-item .branch-info-content {
-    padding: 25px; 
-    text-align: center; /* 내부 모든 텍스트 가운데 정렬 */
+.ui-card-content {
+    padding: 0 15px; 
+    text-align: center; 
     flex-grow: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 수직 가운데 정렬도 추가 (필요시) */
+    justify-content: center; 
 }
-#branches .branch-item .branch-info-content h3 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
+.ui-card-title { /* 공통 제목 스타일 (h3, h4에 적용) */
+    margin: 15px 0 5px 0;
     color: var(--text-headings);
-    /* text-align: center; 는 부모로부터 상속 */
+    font-weight: 700; /* h 태그 기본값과 동일하게 */
 }
-#branches .branch-item .branch-info-content p {
-    font-size: 1rem;
+.ui-card-description { /* 공통 설명 스타일 (p에 적용) */
     margin-bottom: 8px;
-    color: var(--text-secondary);
-    /* text-align: center; 는 부모로부터 상속 */
+    /* color 는 각 섹션에서 다르게 줄 수 있도록 여기서는 지정하지 않거나, 기본값 사용 */
 }
-#branches .branch-item .branch-info-content p:last-child {
-    margin-bottom: 0;
+.ui-card-description:last-of-type { /* 같은 레벨의 마지막 설명 p 태그 */
+    margin-bottom: 15px;
 }
 
-/* Services Section */
+/* Branches Section Specific Styles */
+#branches .branches-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-top: 40px;
+}
+#branches .branch-item { /* a.ui-card */
+    flex: 1;
+    min-width: 260px; 
+}
+#branches .branch-item:hover { /* a.ui-card:hover */
+    color: var(--text-accent); /* 링크 호버 시 내부 텍스트 전체 색상 변경 (기존 동작 유지) */
+}
+#branches .ui-card-title { /* h3 */
+    font-size: 1.6rem;
+}
+#branches .ui-card-description { /* p */
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Services Section Specific Styles */
 #services .service-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 35px;
     margin-top: 50px;
 }
-#services .service-item {
-    background: var(--bg-card);
-    border: 1px solid var(--border-card);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px var(--shadow-card);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-    text-align: center; 
-}
-#services .service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px var(--shadow-card-hover);
-}
-#services .service-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    background-color: var(--bg-product-image-placeholder);
-    filter: var(--image-filter-default);
-}
-#services .service-item h4 {
-    margin: 15px 0 5px 0;
+/* .service-item 은 div.ui-card */
+#services .ui-card-title { /* h4 */
     font-size: 1.3rem;
-    color: var(--text-headings);
 }
-#services .service-item p {
-    padding: 0 15px 15px 15px;
+#services .ui-card-description { /* p */
     font-size: 0.9rem;
     color: var(--text-product-meta);
-    min-height: 45px;
+    min-height: 45px; /* 서비스 설명 영역 최소 높이 유지 */
 }
+/* 서비스 아이템은 링크가 아니므로 호버 시 텍스트 색상 변경 없음 */
+
 
 /* Common iframe Styles */
 section iframe { display: block; width: 100%; border: none; }
@@ -375,7 +363,9 @@ section iframe { display: block; width: 100%; border: none; }
     transition: background-color 0.3s ease;
 }
 #location .map-container iframe { border-radius: 10px; }
-#location p { font-size: 1.1rem; margin-top: 20px; }
+#location p { font-size: 1.1rem; margin-top: 20px; color: var(--text-primary); } /* 색상 지정 */
+#location p strong { color: var(--text-headings); }
+
 
 /* Contact Section */
 #contact .contact-info { margin-top: 40px; display: inline-block; text-align: left; }
@@ -384,7 +374,7 @@ section iframe { display: block; width: 100%; border: none; }
 .contact-item .text-content { display: flex; flex-direction: column; }
 .contact-item .text-content strong { font-size: 1.1rem; color: var(--text-headings); margin-bottom: 3px; }
 .contact-item .text-content span { font-size: 1.05rem; color: var(--text-primary); }
-.contact-item .text-content a { font-size: 1.05rem; color: var(--text-accent); }
+.contact-item .text-content a { font-size: 1.05rem; color: var(--text-accent); } /* 연락처 내 링크는 accent 색상 유지 */
 .contact-item .text-content a:hover { color: var(--text-accent-hover); }
 
 /* Footer */
