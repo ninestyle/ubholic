@@ -34,7 +34,7 @@ const languages = {
         'contact_title': '연락처',
         'contact_desc': '궁금한 점이 있으시면 언제든지 문의해 주세요.',
         'rep_label': '대표:',
-        'rep_name_text': '최유비 (Choi Yubi)',
+        'rep_name_text': '최유비',
         'phone_label': '연락처:',
         'phone_num_text': '0507-1336-1520',
         'email_label': '이메일:',
