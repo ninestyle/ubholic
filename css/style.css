@@ -14,7 +14,7 @@
     --bg-nav-icon-button-hover: #C95C8D;
     --bg-to-top-button: rgba(222, 111, 161, 0.7);
     --bg-to-top-button-hover: rgba(201, 92, 141, 0.9);
-    --bg-product-image-placeholder: #FDEFF2;
+    --bg-product-image-placeholder: #FDEFF2; /* 이미지 로딩 중 배경색 또는 플레이스홀더 배경 */
     --bg-branch-item: #ffffff;
     --bg-home-overlay: rgba(80, 20, 40, 0.45);
 
@@ -263,38 +263,57 @@ section:not(#home):nth-of-type(even) { background-color: var(--bg-secondary); }
 #branches .branches-content {
     display: flex;
     justify-content: space-around;
-    text-align: left; /* 각 아이템 내부 텍스트 기본 왼쪽 정렬 */
+    text-align: left; 
     gap: 40px;
     margin-top: 40px;
 }
 #branches .branch-item {
     flex: 1;
+    min-width: 260px; /* 최소 너비 추가하여 너무 좁아지지 않게 */
     background: var(--bg-branch-item);
-    padding: 40px;
-    border-radius: 12px;
+    border-radius: 12px; 
     box-shadow: 0 8px 25px var(--shadow-branch-item);
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease, border-color 0.3s ease;
     border: 1px solid var(--border-branch-item);
     text-decoration: none;
     color: var(--text-primary);
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
 }
 #branches .branch-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 35px var(--shadow-branch-item-hover);
     color: var(--text-accent);
 }
-#branches .branch-item h3 { /* 지점명(제목)만 가운데 정렬 */
-    font-size: 1.6rem;
-    margin-bottom: 20px; /* 노아와 동일하게 조정 */
-    color: var(--text-headings);
-    text-align: center;
+#branches .branch-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    background-color: var(--bg-product-image-placeholder);
+    filter: var(--image-filter-default);
 }
-#branches .branch-item p {
-    font-size: 1rem; /* 노아 p태그는 기본 폰트 사이즈 따름. 이전 1rem 유지 */
+#branches .branch-item .branch-info-content {
+    padding: 25px; 
+    text-align: left; 
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+#branches .branch-item .branch-info-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--text-headings);
+    text-align: center; 
+}
+#branches .branch-item .branch-info-content p {
+    font-size: 1rem;
     margin-bottom: 8px;
     color: var(--text-secondary);
 }
-#branches .branch-item p:last-child { margin-bottom: 0; }
+#branches .branch-item .branch-info-content p:last-child {
+    margin-bottom: 0;
+}
 
 /* Services Section */
 #services .service-gallery {
@@ -310,7 +329,7 @@ section:not(#home):nth-of-type(even) { background-color: var(--bg-secondary); }
     overflow: hidden;
     box-shadow: 0 5px 15px var(--shadow-card);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-    text-align: center; /* 서비스 아이템 내부는 전체 가운데 정렬 */
+    text-align: center; 
 }
 #services .service-item:hover {
     transform: translateY(-5px);
