@@ -7,7 +7,7 @@ const languages = {
         'home_title': 'UBHOLIC',
         'home_subtitle': '편안함이 채워주는 아름다움, 속눈썹부터 피부까지',
         'branches_title': '지점 안내',
-        'branches_desc': '지점 클릭 시 네이버 지도로 연결됩니다',
+        'branches_desc': '지점 클릭 시 네이버 지도로 연결됩니다.',
         'branch1_name': '전주본점',
         'branch1_address': '전북 전주시 완산구 소태정3길 16-1 1층',
         'branch1_tel': '0507-1336-1520',
