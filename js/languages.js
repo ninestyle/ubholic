@@ -7,6 +7,7 @@ const languages = {
         'home_title': 'UBHOLIC',
         'home_subtitle': '편안함이 채워주는 아름다움, 속눈썹부터 피부까지',
         'branches_title': '지점 안내',
+        'branches_desc': '지점 클릭 시 네이버 지도로 연결됩니다',
         'branch1_name': '전주본점',
         'branch1_address': '전북 전주시 완산구 소태정3길 16-1 1층',
         'branch1_tel': '0507-1336-1520',
@@ -34,14 +35,14 @@ const languages = {
         'contact_title': '연락처',
         'contact_desc': '궁금한 점이 있으시면 언제든지 문의해 주세요.',
         'rep_label': '대표:',
-        'rep_name_text': '최유비',
+        'rep_name_text': '최유비 (Choi Yubi)',
         'phone_label': '연락처:',
         'phone_num_text': '0507-1336-1520',
         'email_label': '이메일:',
         'email_address_text': 'ubholic@gmail.com',
         'footer_text': '© 2025 유비홀릭 (UBHOLIC). All Rights Reserved.'
     },
-    'en': { // TODO: 영어 번역 필요
+    'en': {
         'site_title': 'UBHOLIC - Beauty Filled with Comfort',
         'logo_text': 'UBHOLIC',
         'nav_language': 'Language',
@@ -49,6 +50,7 @@ const languages = {
         'home_title': 'UBHOLIC',
         'home_subtitle': 'Beauty from eyelashes to skin, filled with comfort',
         'branches_title': 'Our Branches',
+        'branches_desc': 'Click on a branch to view it on Naver Maps.',
         'branch1_name': 'Jeonju Main Branch',
         'branch1_address': '1F, 16-1 Sotaejeong 3-gil, Wansan-gu, Jeonju-si, Jeollabuk-do',
         'branch1_tel': '0507-1336-1520',
@@ -83,7 +85,7 @@ const languages = {
         'email_address_text': 'ubholic@gmail.com',
         'footer_text': '© 2025 UBHOLIC. All Rights Reserved.'
     },
-    'vi': { // TODO: 베트남어 번역 필요
+    'vi': { 
         'site_title': 'UBHOLIC - Vẻ đẹp được lấp đầy bởi sự thoải mái',
         'logo_text': 'UBHOLIC',
         'nav_language': 'Ngôn ngữ',
@@ -91,6 +93,7 @@ const languages = {
         'home_title': 'UBHOLIC',
         'home_subtitle': 'Vẻ đẹp từ lông mi đến làn da, đong đầy sự thoải mái',
         'branches_title': 'Các chi nhánh',
+        'branches_desc': 'Nhấp vào một chi nhánh để xem nó trên Bản đồ Naver.',
         'branch1_name': 'Chi nhánh chính Jeonju',
         'branch1_address': 'Tầng 1, 16-1 Sotaejeong 3-gil, Wansan-gu, Jeonju-si, Jeollabuk-do',
         'branch1_tel': '0507-1336-1520',
@@ -125,5 +128,4 @@ const languages = {
         'email_address_text': 'ubholic@gmail.com',
         'footer_text': '© 2025 UBHOLIC. Đã đăng ký Bản quyền.'
     }
-    // 'ja' 객체 전체 삭제됨
 };
