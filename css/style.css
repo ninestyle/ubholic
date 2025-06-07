@@ -102,7 +102,7 @@
         --shadow-home-text: rgba(0,0,0,0.5);
         --shadow-home-subtitle-text: rgba(0,0,0,0.6);
 
-        --image-filter-default: brightness(0.9) contrast(1);
+         --image-filter-default: none;
     }
 }
 
